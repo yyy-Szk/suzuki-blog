@@ -4,19 +4,17 @@ module.exports = {
   mode: 'development',
   entry: './src/index.tsx',
   output: {
-      path: path.join(__dirname, 'public/js'),
-      filename: 'bundle.js'
+    path: path.join(__dirname, 'public/js'),
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['.js', '.json', '.ts', '.tsx'],
   },
   devtool: 'inline-source-map',
   module: {
-    rules: [
-      { test: /\.tsx?$/, loader: 'ts-loader' }
-    ]
+    rules: [{ test: /\.tsx?$/, loader: 'ts-loader' }],
   },
-  target: ["web", "es5"],
+  target: ['web', 'es5'],
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
@@ -24,4 +22,3 @@ module.exports = {
     port: 8080,
   },
 }
-
